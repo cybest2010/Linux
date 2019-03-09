@@ -1,0 +1,5 @@
+GNU:格奴计划 
+GPL：general public license
+
+快速修改密码： echo "12345" |passwd --stdin root
+系统反应很慢查看系统内核日志：cat /var/log/dmesg 启动信息及磁盘挂载
