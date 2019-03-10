@@ -3,3 +3,23 @@ GPL：general public license
 
 快速修改密码： echo "12345" |passwd --stdin root
 系统反应很慢查看系统内核日志：cat /var/log/dmesg 启动信息及磁盘挂载
+
+拷贝光盘到目录
+step 1:插入移动硬盘，然后输入命令 sudo fdisk -l
+        可看到所有硬盘信息和分区信息，如：我的是 /dev/sdb1   *        2048   976769023   488383488    7  HPFS/NTFS/exFAT
+ 
+step 2 挂载
+ 先在服务器建立一个文件夹 sudo mkdir /media/disk ,然后把移动硬盘挂载在这个文件夹上 mount -o rw /dev/sdb1　/media/disk，这样移动硬盘相当于系统的一个文件夹
+ 
+step3 复制
+ 
+ cp -r /var/www/x2bbs /media/disk
+ 
+ 源码的安装一般由3个步骤组成：配置(configure)、编译(make)、安装(make install)
+ 
+ mysql启动卡住
+ /etc/rc.local 去除开机启动项
+ 
+ ftp主动模式，被动模式
+ 
+ HTTP状态码2xx,3xx,4xx（客户端内部问题）,5xx(服务器内部错误)
